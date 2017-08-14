@@ -10,7 +10,7 @@ namespace Woods.Controllers
 {
     public class HomeController : Controller
     {
-        public List<Message> messages = new List<Message>();
+        public static List<Message> messages = new List<Message>();
         public Map new_map = new Map();
         // GET: /Home/
         [HttpGet]
@@ -18,6 +18,7 @@ namespace Woods.Controllers
         public IActionResult Index()
         {
             ViewBag.map = new_map;
+            System.Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~");
             foreach(var message in messages){
                 System.Console.WriteLine(message.Content);
             }
@@ -32,11 +33,7 @@ namespace Woods.Controllers
                 Content=content,
                 PlayerName=user_name
             };
-            // System.Console.WriteLine(new_msg.PlayerName +" says: " +new_msg.Content);
-            messages.Add(new_msg);
-            foreach(var message in messages){
-                System.Console.WriteLine(message.Content);
-            }
+            messages.Insert(0, new_msg);
             return RedirectToAction("Index");
         }
     }

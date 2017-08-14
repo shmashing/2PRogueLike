@@ -4,7 +4,7 @@ namespace Woods.Models {
     public class Map {
 
         public static int MAP_WIDTH = 30;
-        public static int MAP_HEIGHT = 20;
+        public static int MAP_HEIGHT = 15;
         public Tile[][] map = new Tile[MAP_HEIGHT][];
     
         public Map(){

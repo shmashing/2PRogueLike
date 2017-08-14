@@ -4,7 +4,7 @@
 <script src="http://ajax.microsoft.com/ajax/jquery/jquery-1.4.2.js" type="text/javascript"></script>  
 <script>
     $(document).ready(function(){
-        $('.message_box').keypress(function(event){
+        $('.text_area').keypress(function(event){
             var key = event.keyCode;
             if(key == 13){
                 console.log("made it into if chekc")
@@ -76,10 +76,11 @@
             <p class="message"> >>@message.PlayerName says: @message.Content</p>
         }
     }
-    <p class="message">>>WELCOME TO THE DUNGEON OF DEATH<p>
-
+    <p class="message">>>WELCOME TO THE DUNGEON OF DEATH</p>
+</div>
+<div class="text_area">
     <form action="addmessage" method="post" class="msg_form">
         <input type="hidden" value="shmash" name="user_name">
-        <textarea cols=15 rows=5 placeholder="send a message" name="content" class="add_message"></textarea>
+        <textarea placeholder="send a message" name="content" class="add_message"></textarea>
     </form>
 </div>

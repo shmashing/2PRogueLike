@@ -33,7 +33,7 @@ span {
     margin-top: 60px;
     padding: 0px;
     width: 1300px;
-    height: 700px;
+    height: auto;
     overflow: hidden; 
 }
 .player {
@@ -52,16 +52,20 @@ span {
 }
 .message_box {
     width: 1042px;
-    height: 200px;
+    height: 100px;
     padding: 5px;
     border: 3px solid black;
-    margin-top: -100px;
+    margin-top: 0px;
     overflow: auto;
 }
+
+.msg_form {
+    margin-top: 38px;
+    height:20px;
+}
 .add_message {
-    width: 1042px;
+    width: 1059px;
     position:absolute;
-    height: 10px;
     bottom:0px;
     display: inline-block;
 }
